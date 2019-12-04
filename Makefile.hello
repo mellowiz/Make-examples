@@ -1,0 +1,14 @@
+all : hello.o
+	gcc -Wall hello.o -o hello.exe
+
+hello.o : hello.c
+	gcc -c -Wall hello.c -o hello.o
+
+clean :
+	rm hello.o
+
+install :
+	cp hello.exe ~/scripts/
+
+test :
+	@echo "Hello!"

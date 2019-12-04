@@ -1,0 +1,11 @@
+all : addnums1.o addnums2.o
+	gcc -Wall addnums2.o addnums1.o -o addnums.exe
+
+addnums1.o : addnums1.c addnums.h
+	gcc -c -Wall addnums1.c -o addnums1.o
+
+addnums2.o : addnums2.c addnums.h
+	gcc -c -Wall addnums2.c -o addnums2.o
+
+clean :
+	rm addnums*.o
